@@ -1,9 +1,7 @@
-<<<<<<< HEAD
+
 # JobPortal
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
-
-<img src="https://github.com/lomashrishi/job_portal/assets/103207945/b0a82400-daf2-4782-8210-ba49519c4843">
 
 ## Development server
 
@@ -28,7 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-=======
+
 # kanker-recruitment-portal
 This project was generated with Angular CLI version 17.1.2.
 
@@ -49,4 +47,4 @@ Run ng e2e to execute the end-to-end tests via a platform of your choice. To use
 
 Further help
 To get more help on the Angular CLI use ng help or go check out the Angular CLI Overview and Command Reference page.
->>>>>>> dbdbedbdb08edfd230743e8547997e904dbd6932
+
