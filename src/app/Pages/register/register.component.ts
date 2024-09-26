@@ -33,11 +33,11 @@ ViewProfileUrl:any | null =null;
 
   constructor(private FBuilder: FormBuilder, public RegisterService: RegisterService,private toast:NgToastService) {
     this.registerForm = this.FBuilder.group({
-      Name: ['Lomash', [Validators.required, Validators.pattern('^[a-zA-Z]+(?:\\s[a-zA-Z]+){0,2}$'), Validators.maxLength(30)]],
+      Name: ['Homesh', [Validators.required, Validators.pattern('^[a-zA-Z]+(?:\\s[a-zA-Z]+){0,2}$'), Validators.maxLength(30)]],
       Dob: ['', [Validators.required,]],
       Gender: ['Male', [Validators.required]],
       Category: ['GENERAL', [Validators.required]],
-      MaritalStatus: ['Married', [Validators.required]],
+      MaritalStatus: ['UnMarried', [Validators.required]],
       Age: ['19', [Validators.required]],
       RelativeType: ['Father', [Validators.required]],
       RelativeName: ['Ram', [Validators.required,Validators.pattern('^[a-zA-Z]+(?:\\s[a-zA-Z]+){0,2}$'), Validators.maxLength(30)]],
@@ -46,9 +46,9 @@ ViewProfileUrl:any | null =null;
       DomicileCG: ['Yes', [Validators.required]],
       DomecileDistrict: ['Dhamtari', [Validators.required]],
       Disabilities: ['No', [Validators.required]],
-      FamilyYearlyIncome: ['80000', [Validators.required]],
-      Email: ['Ok@gmail.com', [Validators.required, Validators.email, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')]],
-      Mobile: ['9977679866', [Validators.required]],
+      FamilyYearlyIncome: ['80000', [Validators.required, Validators.pattern("^[0-9]*$")]],
+      Email: ['ok@gmail.com', [Validators.required, Validators.email, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')]],
+      Mobile: ['9977679866', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
       Password: ['Rok#2024', [Validators.required,Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+\\-\\[\\]{};:\'",.<>/?])[A-Za-z\\d!@#$%^&*()_+\\-\\[\\]{};:\'",.<>/?]{8,}$')
     ]],
       RepeatPassword: ['Rok#2024', [Validators.required,Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+\\-\\[\\]{};:\'",.<>/?])[A-Za-z\\d!@#$%^&*()_+\\-\\[\\]{};:\'",.<>/?]{8,}$')

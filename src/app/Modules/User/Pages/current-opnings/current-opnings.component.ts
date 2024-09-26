@@ -4,11 +4,12 @@ import { UserSideNavComponent } from '../../Layouts/user-side-nav/user-side-nav.
 import { UserFooterComponent } from '../../Layouts/user-footer/user-footer.component';
 import { CurrentJobService } from '../../Services/currentJob/current-job.service';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-current-opnings',
   standalone: true,
-  imports: [UserNavComponent,UserSideNavComponent,UserFooterComponent,CommonModule],
+  imports: [UserNavComponent,UserSideNavComponent,UserFooterComponent,CommonModule,RouterLink,],
   templateUrl: './current-opnings.component.html',
   styleUrl: './current-opnings.component.css'
 })

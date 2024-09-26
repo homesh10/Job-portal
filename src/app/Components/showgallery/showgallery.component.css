@@ -3,3 +3,12 @@
     border: solid white;
     color: aliceblue;
 }
+.rounded-top{
+    border-radius: 10px;
+    height: 158*127;
+}
+.thumbnail img {
+    width: 100%;
+    height: 200px; /* Set the desired height */
+    object-fit: cover; /* This ensures the image covers the entire area while maintaining aspect ratio */
+  }

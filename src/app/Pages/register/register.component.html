@@ -260,7 +260,7 @@
                                     <label>
                                        <b>Email ID / ईमेल <label class="text-danger fw-bold">*</label></b>
                                     </label>
-                                    <input  formControlName="Email" name="Email" type="text" value="" id="CanEmail" placeholder="Enter Email ID" required class="text-capitalize form-control shadow rounded border-1 border-dark">
+                                    <input  formControlName="Email" name="Email" type="text" value="" id="CanEmail" placeholder="Enter Email ID" required class="text-lowercase form-control shadow rounded border-1 border-dark">
                                     @if (registerForm.get('Email')?.touched && registerForm.get('Email')?.errors?.['required']) {
                                         <small class="text-danger ms-1"><b> Candidate Valid Email Is Required.</b></small>
                                       }

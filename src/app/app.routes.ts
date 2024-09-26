@@ -19,6 +19,8 @@ import { CurrentOpningsComponent } from './Modules/User/Pages/current-opnings/cu
 import { UserSettingsComponent } from './Modules/User/Pages/user-settings/user-settings.component';
 import { AdminHomeComponent } from './Modules/Admin/Pages/admin-home/admin-home.component';
 import { AdminLoginComponent } from './Modules/Admin/Pages/admin-login/admin-login.component';
+import { ImageComponent } from './Pages/gallery/image/image.component';
+import { MultiStepFormComponent } from './Modules/User/Pages/multi-step-form/multi-step-form.component';
 
 
 export const routes: Routes = [
@@ -36,8 +38,12 @@ export const routes: Routes = [
     {'path':'ForgotPassword','title':'Forgot User ID & Password | Kanker Recruitment Portal', component:ForgetComponent},
     {'path':'notification',redirectTo:'notifications',pathMatch:'full'},
     {'path':'notifications','title':'Recruitment Notifications | Kanker Recruitment Portal', component:NotificationsComponent},
-    {'path':'gallery','title':'Gallery | Kanker Recruitment Portal', component:GalleryComponent},
-
+    {'path':'gallery','title':'Gallery | Kanker Recruitment Portal', component:GalleryComponent ,  
+       children: [ {'path': 'image','title':'Gallery | Kanker Recruitment Portal', component: ImageComponent
+        }
+      ]
+    },
+     
     // User All Routes 
     {'path':'user-dashboard','title':'User Dashboard Page | Kanker Recruitment Portal',component:UserDashComponent,canActivate: [AuthGuard]},
     {'path':'user-profile','title':'User Profile Page | Kanker Recruitment Portal',component:UserProfileComponent,canActivate: [AuthGuard]},
@@ -47,6 +53,9 @@ export const routes: Routes = [
     {'path':'user-notification','title':'User Notification Page | Kanker Recruitment Portal',component:UserNotificationsComponent,canActivate: [AuthGuard]},
     {'path':'user-change-password','title':'User Change Password Page | Kanker Recruitment Portal',component:UserChangePasswordComponent,canActivate: [AuthGuard]},
     {'path':'current-opnings','title':'User-Current Opnings Page | Kanker Recruitment Portal',component:CurrentOpningsComponent,canActivate: [AuthGuard]},
+    {'path': 'multi-step-form','title': 'Multi-Step Form | Kanker Recruitment Portal',
+      component: MultiStepFormComponent,canActivate: [AuthGuard]
+    },
     
     
     // Admin

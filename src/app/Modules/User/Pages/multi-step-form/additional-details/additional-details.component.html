@@ -1,0 +1,77 @@
+
+      <div class="container">
+          <h2>Additional Information-I</h2>
+          <form>
+              <div class="form-group">
+                  <label>21. Whether you are an Ex-Serviceman (ESM) or serving in the Armed Forces? <span class="required">*</span></label>
+                  <div class="radio-group">
+                      <input type="radio" id="yes" name="ex-serviceman" value="yes">
+                      <label for="yes">Yes</label>
+                      <input type="radio" id="no" name="ex-serviceman" value="no">
+                      <label for="no">No</label>
+                  </div>
+              </div>
+              
+              <div class="form-group">
+                  <label for="joining-date">21.1. Date of Joining the Armed Forces (DD/MM/YYYY): <span class="required">*</span></label>
+                  <input type="date" id="joining-date" name="joining-date" required>
+              </div>
+  
+              <div class="form-group">
+                  <label for="discharge-date">21.2. Date of Discharge / Likely Date of Discharge from the Armed Forces (DD/MM/YYYY): <span class="required">*</span></label>
+                  <input type="date" id="discharge-date" name="discharge-date" required>
+              </div>
+  
+              <div class="form-group">
+                  <label for="service-length">21.3. Length of service in the Armed Forces:</label>
+                  <input type="text" id="service-length" name="service-length" disabled>
+              </div>
+  
+              <div class="form-group">
+                  <label>21.4. Have you already joined a civil post by availing benefit of reservation for Ex-Serviceman (ESM)?</label>
+                  <div class="radio-group">
+                      <input type="radio" id="yes-civil" name="civil-post" value="yes">
+                      <label for="yes-civil">Yes</label>
+                      <input type="radio" id="no-civil" name="civil-post" value="no">
+                      <label for="no-civil">No</label>
+                  </div>
+              </div>
+  
+              <div class="form-group">
+                  <label for="civil-joining-date">21.5. Date of Joining to Civil Post (DD/MM/YYYY):</label>
+                  <input type="date" id="civil-joining-date" name="civil-joining-date">
+              </div>
+  
+              <div class="form-group">
+                  <label>21.6. Whether seeking Age Relaxation?</label>
+                  <div class="radio-group">
+                      <input type="radio" id="yes-relaxation" name="age-relaxation" value="yes">
+                      <label for="yes-relaxation">Yes</label>
+                      <input type="radio" id="no-relaxation" name="age-relaxation" value="no">
+                      <label for="no-relaxation">No</label>
+                  </div>
+              </div>
+  
+              <div class="form-group">
+                  <label for="relaxation-code">21.7. If Yes, Age Relaxation Code:</label>
+                  <select id="relaxation-code" name="relaxation-code">
+                      <option value="" disabled selected>Select</option>
+                      <option value="code1">Code 1</option>
+                      <option value="code2">Code 2</option>
+                  </select>
+              </div>
+  
+              <div class="form-group">
+                  <label>Do you want to make your personal information available for accessing job opportunities?</label>
+                  <div class="radio-group">
+                      <input type="radio" id="yes-info" name="personal-info" value="yes">
+                      <label for="yes-info">Yes</label>
+                      <input type="radio" id="no-info" name="personal-info" value="no">
+                      <label for="no-info">No</label>
+                  </div>
+              </div>
+  
+              <button type="submit">Submit</button>
+          </form>
+      </div>
+ 

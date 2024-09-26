@@ -1,3 +1,38 @@
-<div class="card  p-0 m-0 mt-1">
-    <iframe  src='https://widgets.sociablekit.com/youtube-channel-videos/iframe/25405970' height="1080"></iframe>
+<div class="card p-0 m-0 mt-1">
+  <div class="container mt-5">
+    <div data-aos="fade-up" class="row">
+      <div class="col-md-3 pb-3" *ngFor="let image of images">
+        <div class="image-container">
+          <img [src]="image.src" [alt]="image.title" class="img-fluid" (click)="openFullScreenModal(image)">
+          <div class="image-overlay">
+            <p>{{ image.title }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full-Screen Modal -->
+  <div class="modal fade" id="fullScreenModal" tabindex="-1" aria-labelledby="fullScreenModalLabel" aria-hidden="true" [ngClass]="{'show': isModalOpen}" [ngStyle]="{'display': isModalOpen ? 'block' : 'none'}">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-center position-relative">
+          <button type="button" class="btn btn-light position-absolute start-0" aria-label="Previous" (click)="previousImage()">
+            <i class="bi bi-arrow-left"></i> <!-- Bootstrap icon for previous -->
+          </button>
+          <h5 class="modal-title" id="fullScreenModalLabel">{{ selectedImage.title }}</h5>
+          <button type="button" class="btn btn-light position-absolute end-0" aria-label="Next" (click)="nextImage()">
+            <i class="bi bi-arrow-right"></i> <!-- Bootstrap icon for next -->
+          </button>
+          <button type="button" class="btn btn-light position-absolute end-0 me-4" aria-label="Close" (click)="closeModal()">
+            <i class="bi bi-x"></i> <!-- Bootstrap icon for close -->
+          </button>
+        </div>
+        <div class="modal-body">
+          <img [src]="selectedImage.src" alt="{{ selectedImage.title }}">
+        </div>
+      </div>
+    </div>
+  </div>
+  
 </div>

@@ -6,11 +6,11 @@ import { NavbarComponent } from '../../Layouts/navbar/navbar.component';
 import { FootslideComponent } from '../../Layouts/footslide/footslide.component';
 import { FooterComponent } from '../../Layouts/footer/footer.component';
 import { NotificationService } from '../../Services/notifications/notification.service';
-
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-notifications',
   standalone: true,
-  imports: [CommonModule, TopnavComponent, HeaderComponent, NavbarComponent, FootslideComponent, FooterComponent],
+  imports: [CommonModule, TopnavComponent, HeaderComponent, NavbarComponent, FootslideComponent, FooterComponent, RouterLink],
   templateUrl: './notifications.component.html',
   styleUrls: ['./notifications.component.css']
 })
@@ -43,6 +43,7 @@ export class NotificationsComponent implements OnInit {
       this.currentPage = page;
     }
   }
+  
 
   // Auto Call
   ngOnInit(): void {

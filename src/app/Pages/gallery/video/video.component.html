@@ -1,3 +1,36 @@
-<div class="card border  p-0 m-0 mt-1">
-    <iframe  src='https://widgets.sociablekit.com/youtube-channel-videos/iframe/25405970' height="1080"></iframe>
-</div>
+<div class="container">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let video of videos">
+        <div class="video-container">
+          <video [src]="video.src" (click)="openFullScreenModal(video)" controls></video>
+          <div class="video-overlay">
+            <p>{{ video.title }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Full-Screen Modal -->
+    <div class="modal fade" id="fullScreenModal" tabindex="-1" aria-labelledby="fullScreenModalLabel" aria-hidden="true" [ngClass]="{'show': isModalOpen}" [ngStyle]="{'display': isModalOpen ? 'block' : 'none'}">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header d-flex justify-content-center position-relative">
+            <button type="button" class="btn btn-light position-absolute start-0" aria-label="Previous" (click)="previousVideo()">
+              <i class="bi bi-arrow-left"></i>
+            </button>
+            <h5 class="modal-title" id="fullScreenModalLabel">{{ selectedVideo.title }}</h5>
+            <button type="button" class="btn btn-light position-absolute end-0" aria-label="Next" (click)="nextVideo()">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+            <button type="button" class="btn btn-light position-absolute end-0 me-4" aria-label="Close" (click)="closeModal()">
+              <i class="bi bi-x"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <video [src]="selectedVideo.src" controls autoplay></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

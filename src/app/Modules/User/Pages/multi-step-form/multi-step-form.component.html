@@ -1,0 +1,28 @@
+<app-user-nav></app-user-nav>
+<app-user-side-nav></app-user-side-nav>
+<div class="form-container">
+    <!-- Progress Bar with Labels -->
+    <div class="progress-bar-container">
+      <div class="progress-bar-labels">
+        <div *ngFor="let step of steps; let i = index" [ngClass]="{'active': currentStep === i}">
+          Step {{i + 1}}: {{step.label}}
+        </div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" [style.width.%]="progress"></div>
+      </div>
+    </div>
+  
+    <!-- Dynamic Form Component -->
+    <ng-container *ngComponentOutlet="currentComponent; injector: formInjector"></ng-container>
+  
+    <!-- Navigation Buttons -->
+    <div class="navigation-buttons">
+      <button type="button" (click)="prevStep()" [disabled]="currentStep === 0">Previous</button>
+      <button type="button" (click)="nextStep()" [disabled]="currentStep === 3">Next</button>
+      <button type="submit" [hidden]="currentStep < 3">Submit</button>
+    </div>
+  </div>
+  <app-user-footer></app-user-footer>
+
+  

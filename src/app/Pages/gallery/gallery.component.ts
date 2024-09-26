@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2, AfterViewInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ImageComponent } from './image/image.component';
 import { VideoComponent } from './video/video.component';
@@ -15,7 +15,13 @@ import { FooterComponent } from '../../Layouts/footer/footer.component';
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.css'
 })
-export class GalleryComponent {
+export class GalleryComponent implements AfterViewInit {
+  constructor(private renderer: Renderer2) {}
+
+  ngAfterViewInit() {
+    // Scroll to the top when the component is initialized
+    this.renderer.selectRootElement('#gallery-top', true).scrollIntoView({ behavior: 'smooth' });
+  }
 
   //  img load 
 
